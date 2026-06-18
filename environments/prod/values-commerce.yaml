@@ -14,6 +14,12 @@ config:
   COGNITO_REGION: "us-east-1"
   COGNITO_USER_POOL_ID: "us-east-1_prodUserPoolId"
   COGNITO_CLIENT_ID: "prodClientIdxxxxxxxxxxxx"
+  AI_SERVICE_URL: "http://ai-service:8000"
+
+# image.repository and image.tag are updated automatically by CI/CD on each deploy
+image:
+  repository: ""
+  tag: ""
 
 serviceAccount:
   annotations:

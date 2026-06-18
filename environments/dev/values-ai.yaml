@@ -1,0 +1,16 @@
+replicaCount: 1
+
+hpa:
+  maxReplicas: 2
+
+config:
+  ENVIRONMENT: "development"
+  USE_SECRETS_MANAGER: "false"
+  SECRET_ID: "fanvault-dev-app-secrets"
+  AI_PROVIDER: "openai"
+  S3_PRODUCT_IMAGES_BUCKET: "fanvault-product-images-REPLACE_WITH_ACTUAL_SUFFIX"
+
+# image.repository and image.tag are updated automatically by CI/CD on each deploy
+image:
+  repository: ""
+  tag: ""
