@@ -10,5 +10,5 @@ config:
   AI_SERVICE_URL: "http://ai-service:8000"
 # image.repository and image.tag are updated automatically by CI/CD on each deploy
 image:
-  repository: "899071933396.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-commerce"
+  repository: "899071933396.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-commerce-service"
   tag: "sha-initial"
