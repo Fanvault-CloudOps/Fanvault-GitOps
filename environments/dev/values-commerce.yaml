@@ -1,8 +1,6 @@
 replicaCount: 1
-
 hpa:
   maxReplicas: 2
-
 config:
   NODE_ENV: "development"
   USE_SECRETS_MANAGER: "false"
@@ -10,8 +8,7 @@ config:
   COGNITO_USER_POOL_ID: "us-east-1_VsEibvEp2"
   COGNITO_CLIENT_ID: "7p64vafrf82fo5pp9q7cn8v0c2"
   AI_SERVICE_URL: "http://ai-service:8000"
-
 # image.repository and image.tag are updated automatically by CI/CD on each deploy
 image:
-  repository: ""
-  tag: ""
+  repository: "899071933396.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-commerce"
+  tag: "sha-initial"
