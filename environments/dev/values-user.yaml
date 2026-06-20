@@ -11,5 +11,5 @@ serviceAccount:
   annotations:
     eks.amazonaws.com/role-arn: "arn:aws:iam::899071933396:role/fanvault-user-irsa-role"
 image:
-  repository: ""
+  repository: 899071933396.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-user-service
   tag: v0.0.2
