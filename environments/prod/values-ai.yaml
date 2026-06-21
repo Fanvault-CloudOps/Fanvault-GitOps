@@ -21,4 +21,4 @@ image:
 
 serviceAccount:
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::899071933396:role/fanvault-ai-irsa-role"
+    eks.amazonaws.com/role-arn: "arn:aws:iam::773384830607:role/fanvault-ai-irsa-role"
