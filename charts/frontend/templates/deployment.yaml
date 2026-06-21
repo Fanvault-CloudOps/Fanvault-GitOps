@@ -18,7 +18,7 @@ spec:
     spec:
       serviceAccountName: {{ include "frontend.serviceAccountName" . }}
       securityContext:
-        {{- toYaml .Values.securityContext | nindent 8 }}
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       volumes:
         - name: tmp
           emptyDir: {}
@@ -28,6 +28,8 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          securityContext:
+            {{- toYaml .Values.containerSecurityContext | nindent 12 }}
           ports:
             - name: http
               containerPort: {{ .Values.containerPort }}
