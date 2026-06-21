@@ -8,8 +8,8 @@ spec:
     - name: fanvault-gateway
       namespace: kgateway-system
   hostnames:
-    - "dev.fanvault.example.com"
-    - "api-dev.fanvault.example.com"
+    - "dev.fanvault.garden"
+    - "api-dev.fanvault.garden"
   rules:
     - matches:
         - path:
