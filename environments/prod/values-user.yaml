@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   pullPolicy: IfNotPresent
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-prod-user-service
-  # tag is updated automatically by CI/CD on each deploy
+  tag: v0.0.1
 
 hpa:
   minReplicas: 2
@@ -16,6 +16,7 @@ config:
   COGNITO_REGION: "us-east-1"
   COGNITO_USER_POOL_ID: "us-east-1_O7cQQXD1P"
   COGNITO_CLIENT_ID: "3fioa78u18rkf7c3kiqb3sud55"
+  DYNAMODB_TABLE_PROFILES: "fanvault-dev-profiles"
 
 serviceAccount:
   name: user-service

@@ -3,4 +3,4 @@ hpa:
   maxReplicas: 2
 image:
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-frontend
-  tag: sha-initial
+  tag: sha-7a34acb

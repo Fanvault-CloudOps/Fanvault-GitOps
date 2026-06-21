@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   pullPolicy: IfNotPresent
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-prod-ai-service
-  # tag is updated automatically by CI/CD on each deploy
+  tag: v0.0.1
 
 hpa:
   minReplicas: 2
