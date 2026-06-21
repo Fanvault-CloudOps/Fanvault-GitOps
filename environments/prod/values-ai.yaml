@@ -2,6 +2,8 @@ replicaCount: 2
 
 image:
   pullPolicy: IfNotPresent
+  repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-prod-ai-service
+  # tag is updated automatically by CI/CD on each deploy
 
 hpa:
   minReplicas: 2
@@ -12,13 +14,9 @@ config:
   USE_SECRETS_MANAGER: "true"
   SECRET_ID: "fanvault-prod-app-secrets"
   AI_PROVIDER: "openai"
-  S3_PRODUCT_IMAGES_BUCKET: "fanvault-product-images-REPLACE_WITH_ACTUAL_SUFFIX"
-
-# image.repository and image.tag are updated automatically by CI/CD on each deploy
-image:
-  repository: ""
-  tag: ""
+  S3_PRODUCT_IMAGES_BUCKET: "fanvault-dev-product-images-773384830607"
 
 serviceAccount:
+  name: ai-service
   annotations:
     eks.amazonaws.com/role-arn: "arn:aws:iam::773384830607:role/fanvault-ai-irsa-role"

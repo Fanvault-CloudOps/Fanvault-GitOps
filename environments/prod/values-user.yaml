@@ -2,6 +2,8 @@ replicaCount: 2
 
 image:
   pullPolicy: IfNotPresent
+  repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-prod-user-service
+  # tag is updated automatically by CI/CD on each deploy
 
 hpa:
   minReplicas: 2
@@ -10,11 +12,12 @@ hpa:
 config:
   NODE_ENV: "production"
   USE_SECRETS_MANAGER: "true"
-  SECRET_ID: "production/fanvault-user"
+  SECRET_ID: "fanvault-prod-app-secrets"
   COGNITO_REGION: "us-east-1"
-  COGNITO_USER_POOL_ID: "us-east-1_prodUserPoolId"
-  COGNITO_CLIENT_ID: "prodClientIdxxxxxxxxxxxx"
+  COGNITO_USER_POOL_ID: "us-east-1_O7cQQXD1P"
+  COGNITO_CLIENT_ID: "3fioa78u18rkf7c3kiqb3sud55"
 
 serviceAccount:
+  name: user-service
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::123456789012:role/fanvault-user-irsa-role"
+    eks.amazonaws.com/role-arn: "arn:aws:iam::773384830607:role/fanvault-user-irsa-role"

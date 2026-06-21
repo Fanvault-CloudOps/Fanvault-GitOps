@@ -6,9 +6,9 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: fanvault-prod
   source:
-    repoURL: https://github.com/Savitxr/fanvault-gitops.git
+    repoURL: https://github.com/Fanvault-CloudOps/Fanvault-GitOps.git
     targetRevision: HEAD
     path: charts/ai-service
     helm:

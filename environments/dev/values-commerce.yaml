@@ -7,7 +7,7 @@ config:
   COGNITO_REGION: "us-east-1"
   COGNITO_USER_POOL_ID: "us-east-1_O7cQQXD1P"
   COGNITO_CLIENT_ID: "3fioa78u18rkf7c3kiqb3sud55"
-  AI_SERVICE_URL: "http://ai-service:8000"
+  AI_SERVICE_URL: "http://dev-ai-service:8000"
 
 serviceAccount:
   annotations:

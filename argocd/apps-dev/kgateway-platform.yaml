@@ -1,18 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: fanvault-gateway
+  name: kgateway-platform
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "-2"
 spec:
   project: default
-  source:
-    repoURL: https://github.com/Fanvault-CloudOps/Fanvault-GitOps.git
-    targetRevision: HEAD
-    path: gateway
+  sources:
+  - repoURL: oci://ghcr.io/kgateway-dev/charts
+    chart: kgateway-crds
+    targetRevision: "2.3.4"
+    helm:
+      releaseName: kgateway-crds
+  - repoURL: oci://ghcr.io/kgateway-dev/charts
+    chart: kgateway
+    targetRevision: "2.3.4"
+    helm:
+      releaseName: kgateway
   destination:
     server: https://kubernetes.default.svc
     namespace: kgateway-system
