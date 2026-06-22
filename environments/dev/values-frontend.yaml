@@ -1,6 +1,6 @@
-replicaCount: 1
+replicaCount: 2
 hpa:
-  maxReplicas: 2
+  maxReplicas: 4
 image:
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-frontend
   tag: v0.2.0

@@ -1,6 +1,6 @@
-replicaCount: 1
+replicaCount: 2
 hpa:
-  maxReplicas: 2
+  maxReplicas: 4
 config:
   ENVIRONMENT: "development"
   USE_SECRETS_MANAGER: "false"
