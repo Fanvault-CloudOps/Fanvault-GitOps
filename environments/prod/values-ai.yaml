@@ -11,9 +11,6 @@ hpa:
 
 config:
   ENVIRONMENT: "production"
-  USE_SECRETS_MANAGER: "true"
-  SECRET_ID: "fanvault-prod-app-secrets"
-  AI_PROVIDER: "openai"
   S3_PRODUCT_IMAGES_BUCKET: "fanvault-dev-product-images-773384830607"
 
 serviceAccount:

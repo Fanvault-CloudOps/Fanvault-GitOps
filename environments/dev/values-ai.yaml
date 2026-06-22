@@ -3,9 +3,6 @@ hpa:
   maxReplicas: 4
 config:
   ENVIRONMENT: "development"
-  USE_SECRETS_MANAGER: "false"
-  SECRET_ID: "fanvault-dev-app-secrets"
-  AI_PROVIDER: "openai"
   S3_PRODUCT_IMAGES_BUCKET: "fanvault-dev-product-images-773384830607"
 serviceAccount:
   annotations:
