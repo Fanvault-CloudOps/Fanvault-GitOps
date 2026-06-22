@@ -12,6 +12,8 @@ config:
   DYNAMODB_TABLE_ORDERS: "fanvault-dev-orders"
   DYNAMODB_TABLE_AUDIT_LOGS: "fanvault-dev-audit-logs"
   DYNAMODB_TABLE_METADATA: "fanvault-dev-metadata"
+  EVENTBRIDGE_BUS_NAME: "fanvault-dev-event-bus"
+  SNS_TOPIC_ORDER_FAILURE: "arn:aws:sns:us-east-1:773384830607:fanvault-dev-order-failure-alerts"
 serviceAccount:
   annotations:
     eks.amazonaws.com/role-arn: "arn:aws:iam::773384830607:role/fanvault-commerce-irsa-role"
