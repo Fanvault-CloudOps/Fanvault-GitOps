@@ -12,12 +12,10 @@ config:
   DYNAMODB_TABLE_ORDERS: "fanvault-dev-orders"
   DYNAMODB_TABLE_AUDIT_LOGS: "fanvault-dev-audit-logs"
   DYNAMODB_TABLE_METADATA: "fanvault-dev-metadata"
-
 serviceAccount:
   annotations:
     eks.amazonaws.com/role-arn: "arn:aws:iam::773384830607:role/fanvault-commerce-irsa-role"
-
 # image.repository and image.tag are updated automatically by CI/CD on each deploy
 image:
   repository: "773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-commerce-service"
-  tag: "sha-7a34acb"
+  tag: "v0.2.1"
