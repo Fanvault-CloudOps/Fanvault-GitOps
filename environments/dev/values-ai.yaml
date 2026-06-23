@@ -4,6 +4,7 @@ hpa:
 config:
   ENVIRONMENT: "development"
   S3_PRODUCT_IMAGES_BUCKET: "fanvault-dev-product-images-773384830607"
+  BEDROCK_ASSUME_ROLE_ARN: "arn:aws:iam::899071933396:role/fanvault-bedrock-cross-account-role"
 serviceAccount:
   annotations:
     eks.amazonaws.com/role-arn: "arn:aws:iam::773384830607:role/fanvault-ai-irsa-role"
