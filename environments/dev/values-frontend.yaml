@@ -4,3 +4,6 @@ hpa:
 image:
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-frontend
   tag: v0.4.4
+
+serviceMonitor:
+  enabled: true

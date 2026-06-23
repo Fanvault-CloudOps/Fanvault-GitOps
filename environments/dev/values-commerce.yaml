@@ -21,3 +21,6 @@ serviceAccount:
 image:
   repository: "773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-commerce-service"
   tag: "v0.4.3"
+
+serviceMonitor:
+  enabled: true

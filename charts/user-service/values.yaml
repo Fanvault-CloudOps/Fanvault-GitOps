@@ -31,10 +31,10 @@ containerSecurityContext:
 
 hpa:
   enabled: true
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 3
-  targetCPUUtilizationPercentage: 80
-  targetMemoryUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 75
 
 pdb:
   enabled: true
@@ -51,6 +51,18 @@ networkPolicy:
         - podSelector:
             matchLabels:
               app.kubernetes.io/name: frontend
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: monitoring
+          podSelector:
+            matchLabels:
+              app.kubernetes.io/name: prometheus
+
+
+serviceMonitor:
+  enabled: false
+  interval: 30s
+  path: /metrics
 
 # ServiceAccount variables, including IRSA annotations for AWS role mapping
 serviceAccount:

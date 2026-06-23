@@ -31,10 +31,10 @@ containerSecurityContext:
 
 hpa:
   enabled: true
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 3
-  targetCPUUtilizationPercentage: 80
-  targetMemoryUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 75
 
 pdb:
   enabled: true
@@ -48,6 +48,12 @@ networkPolicy:
         - podSelector:
             matchLabels:
               app.kubernetes.io/name: commerce-service
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: monitoring
+          podSelector:
+            matchLabels:
+              app.kubernetes.io/name: prometheus
 
 # ServiceAccount with IRSA annotation for Bedrock, S3, CloudWatch, Secrets Manager access
 serviceAccount:
