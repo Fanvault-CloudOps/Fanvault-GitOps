@@ -4,9 +4,6 @@ hpa:
 config:
   ENVIRONMENT: "development"
   S3_PRODUCT_IMAGES_BUCKET: "fanvault-dev-product-images-773384830607"
-  BEDROCK_REGION: "us-east-1"
-  BEDROCK_MODEL_ID: "amazon.nova-pro-v1:0"
-  SECRET_ID: "fanvault-dev-app-secrets"
 serviceAccount:
   annotations:
     eks.amazonaws.com/role-arn: "arn:aws:iam::773384830607:role/fanvault-ai-irsa-role"
