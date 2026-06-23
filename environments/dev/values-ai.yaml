@@ -11,6 +11,6 @@ serviceAccount:
 # image.repository and image.tag are updated automatically by CI/CD on each deploy
 image:
   repository: "773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-ai-service"
-  tag: "v0.7.0"
+  tag: "v0.7.1"
 serviceMonitor:
   enabled: true
