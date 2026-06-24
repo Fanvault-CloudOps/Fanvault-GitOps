@@ -3,6 +3,6 @@ hpa:
   maxReplicas: 4
 image:
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-frontend
-  tag: v1.0.1
+  tag: dev-b9f9851
 serviceMonitor:
   enabled: true
