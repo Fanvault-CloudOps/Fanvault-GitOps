@@ -1,14 +1,11 @@
 replicaCount: 2
-
 image:
   pullPolicy: IfNotPresent
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-prod-commerce-service
-  tag: v0.0.1
-
+  tag: v1.0.0
 hpa:
   minReplicas: 2
   maxReplicas: 5
-
 config:
   NODE_ENV: "production"
   USE_SECRETS_MANAGER: "true"
@@ -20,7 +17,6 @@ config:
   DYNAMODB_TABLE_PRODUCTS: "fanvault-dev-products"
   DYNAMODB_TABLE_ORDERS: "fanvault-dev-orders"
   DYNAMODB_TABLE_METADATA: "fanvault-dev-metadata"
-
 serviceAccount:
   name: commerce-service
   annotations:
