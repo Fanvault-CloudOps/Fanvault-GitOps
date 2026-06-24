@@ -1,14 +1,11 @@
 replicaCount: 2
-
 image:
   pullPolicy: IfNotPresent
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-prod-frontend
-  tag: v0.0.1
-
+  tag: v1.0.0
 hpa:
   minReplicas: 2
   maxReplicas: 5
-
 config:
   USER_SERVICE_HOST: prod-user-service
   USER_SERVICE_PORT: "3001"
