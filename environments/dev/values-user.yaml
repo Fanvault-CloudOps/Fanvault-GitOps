@@ -13,7 +13,6 @@ serviceAccount:
     eks.amazonaws.com/role-arn: "arn:aws:iam::773384830607:role/fanvault-user-irsa-role"
 image:
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-dev-user-service
-  tag: v0.4.3
-
+  tag: v0.7.2
 serviceMonitor:
   enabled: true
