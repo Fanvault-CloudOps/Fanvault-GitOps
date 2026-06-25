@@ -2,7 +2,7 @@ replicaCount: 2
 image:
   pullPolicy: IfNotPresent
   repository: 773384830607.dkr.ecr.us-east-1.amazonaws.com/fanvault-prod-commerce-service
-  tag: v1.0.0
+  tag: v0.0.1
 hpa:
   minReplicas: 2
   maxReplicas: 5
